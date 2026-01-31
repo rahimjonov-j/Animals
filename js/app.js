@@ -17,6 +17,7 @@ import {
   elTostTemp,
   elSearch,
 } from "./elements.js";
+import { animals } from "./data.js";
 
 // ui fetch main
 loader(true);
