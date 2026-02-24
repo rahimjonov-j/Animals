@@ -29,49 +29,12 @@ fetch("https://json-api.uz/api/project/game-over/animals")
   })
   .catch((err) => {
     elContainer.innerHTML = `
-<div class="flex flex-col items-center ml-150 mt-20">
+<div class="flex flex-col w-full justify-center items-center ml-120 mt-30">
 
-  <span >
-    <svg
-      fill="#000000"
-      height="200px"
-      width="200px"
-      version="1.1"
-      id="Layer_1"
-      xmlns="http://www.w3.org/2000/svg"
-      xmlns:xlink="http://www.w3.org/1999/xlink"
-      viewBox="0 0 512.00 512.00"
-      xml:space="preserve"
-    >
-      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-      <g
-        id="SVGRepo_tracerCarrier"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      ></g>
-      <g id="SVGRepo_iconCarrier">
-        <g>
-          <g>
-            <g>
-              <path
-                d="M21.333,21.333h213.333v96c0,5.867,4.8,10.667,10.667,10.667h96v74.667h21.333v-85.333c0-2.88-1.173-5.547-3.093-7.573 L252.907,3.093C250.88,1.173,248.213,0,245.333,0H10.667C4.8,0,0,4.8,0,10.667v448c0,5.867,4.8,10.667,10.667,10.667H224V448 H21.333V21.333z M256,36.373l70.293,70.293H256V36.373z"
-              ></path>
-              <path
-                d="M510.827,496.533l-128-256c-3.627-7.253-15.467-7.253-19.093,0l-128,256c-2.667,5.227-0.533,11.627,4.8,14.293 c1.493,0.747,3.093,1.173,4.8,1.173h256C507.2,512,512,507.2,512,501.333C512,499.733,511.573,498.027,510.827,496.533z M262.613,490.667l110.72-221.44l110.72,221.44H262.613z"
-              ></path>
-              <path
-                d="M362.667,350.08v69.44c0,5.333,3.84,10.133,9.067,10.88c6.613,0.96,12.267-4.16,12.267-10.56V350.4 c0-5.333-3.84-10.133-9.067-10.88C368.32,338.56,362.667,343.68,362.667,350.08z"
-              ></path>
-              <path
-                d="M373.333,444.16c-5.867,0-10.667,4.8-10.667,10.667c0,5.867,4.8,10.667,10.667,10.667c5.867,0,10.667-4.8,10.667-10.667 C384,448.96,379.2,444.16,373.333,444.16z"
-              ></path>
-            </g>
-          </g>
-        </g>
-      </g>
-    </svg>
-   <span class="text-heading text-4xl ">Not found</span></div>
-    </span>
+<h1 class="text-4xl  text-dark font-bold in-dark:text-white">OPS !</h1>
+<h2 class="text-3xl text-dark pt-5 font-semibold in-dark:text-white">Something wrong </h2>
+
+ 
 </div>
   
 
@@ -253,7 +216,14 @@ function searchAnimal(nameAnimal) {
       ui(res.data);
     })
     .catch(() => {
-      elContainer.innerHTML = `<svg class="flex   ml-130 mt-10" width="254px" height="254px" viewBox="-20 0 190 190" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M38.155 140.475L48.988 62.1108L92.869 67.0568L111.437 91.0118L103.396 148.121L38.155 140.475ZM84.013 94.0018L88.827 71.8068L54.046 68.3068L44.192 135.457L98.335 142.084L104.877 96.8088L84.013 94.0018ZM59.771 123.595C59.394 123.099 56.05 120.299 55.421 119.433C64.32 109.522 86.05 109.645 92.085 122.757C91.08 123.128 86.59 125.072 85.71 125.567C83.192 118.25 68.445 115.942 59.771 123.595ZM76.503 96.4988L72.837 99.2588L67.322 92.6168L59.815 96.6468L56.786 91.5778L63.615 88.1508L59.089 82.6988L64.589 79.0188L68.979 85.4578L76.798 81.5328L79.154 86.2638L72.107 90.0468L76.503 96.4988Z" fill="#000000"></path> </g></svg>`;
+      elContainer.innerHTML = `
+      <div class="flex flex-col w-full justify-center items-center ml-120 mt-30">
+
+<h2 class="text-3xl text-dark pt-5 font-semibold in-dark:text-white">Note Found! </h2>
+
+ 
+</div>
+      `;
     })
     .finally(() => {});
 }
